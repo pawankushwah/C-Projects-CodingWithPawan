@@ -6,6 +6,7 @@
 void menu(int);
 
 // Global variable
+// chnange this variable according to the number of options
 int MAXOPT = 4;
 
 int main(void)
@@ -37,7 +38,8 @@ int main(void)
     
         
         case 80: // for Down arrow key
-        if (i != 4)
+        // here you can either directly write the number of option or you can use the MAXOPT varialble like this so that you don;t have change it when ever you change the number of options
+        if (i != MAXOPT)     // or you can use this for four options if (i != 4)
         {
             i++;
             menu(i);
@@ -59,8 +61,9 @@ int main(void)
 // Defination of menu funcition
 void menu(int arrPos){
     system("cls");
-    int MAXOPT = 4;
-    char options[][20] = {"Start Game","Graphics","Control","Exit"};
+    // int MAXOPT = 4;
+    // I have removed it because we can use MAXOPT variable to automatically change the number of options to be printed
+    char options[][20] = {"Start Game","Graphics","Control","Exit"}; // you can these option as per your convenience
 
     for (int i = 0; i < MAXOPT; i++)
     {
